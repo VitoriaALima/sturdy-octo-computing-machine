@@ -1,0 +1,21 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento -->
+<html lang="en"> <!-- Declaração do idioma da página (inglês) -->
+<head>
+    <meta charset="UTF-8"> <!-- Declaração da codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Declaração da viewport para dispositivos móveis -->
+    <title>Temperatura</title> <!-- Título da página exibido na aba do navegador -->
+</head>
+<body>
+    <h1 style="color: blue">Verificador de temperatura</h1> <!-- Título principal da página -->
+    <form action="/verificar" method="post"> <!-- Formulário para enviar o número para verificação -->
+        <label for="temp">Digite a sua temperatura:</label> <!-- Rótulo do campo de entrada -->
+        <input type="number" id="temp" name="temp" required> <!-- Campo de entrada para o número -->
+        <button type="submit" style="color: Purple">Verificar</button> <!-- Botão de envio do formulário -->
+    </form>
+    <div id="resultado">
+        {% if resultado %} <!-- Verifica se há um resultado a ser exibido -->
+            {{ resultado }} <!-- Exibe o resultado da verificação -->
+        {% endif %}
+    </div>
+</body>
+</html>
